@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="前端开发转型智能体应用工程师的本地学习平台">
+  <title>AgentPath 学习平台</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./styles.css?v=20260818-sidebar2">
+</head>
+<body>
+  <div class="reading-progress" aria-hidden="true"><span id="readingProgress"></span></div>
+
+  <header class="app-header">
+    <div class="header-left">
+      <button class="icon-button mobile-only" id="menuButton" type="button" title="打开课程目录" aria-label="打开课程目录">
+        <i data-lucide="menu"></i>
+      </button>
+      <button class="icon-button desktop-only" id="sidebarToggleButton" type="button" title="收起课程目录" aria-label="收起课程目录" aria-controls="sidebar" aria-expanded="true">
+        <i data-lucide="panel-left-close"></i>
+      </button>
+      <a class="brand" href="#start-here" aria-label="AgentPath 首页">
+        <span class="brand-mark"><i data-lucide="brain-circuit"></i></span>
+        <span class="brand-name">AgentPath</span>
+        <span class="brand-subtitle">智能体应用工程师教程</span>
+      </a>
+    </div>
+
+    <div class="header-actions">
+      <label class="header-search" for="globalSearch">
+        <i data-lucide="search"></i>
+        <input id="globalSearch" type="search" placeholder="搜索课程与知识点" autocomplete="off">
+        <span class="search-count" id="searchCount" aria-live="polite"></span>
+      </label>
+      <button class="icon-button" id="bookmarkButton" type="button" title="收藏当前章节" aria-label="收藏当前章节">
+        <i data-lucide="bookmark"></i>
+      </button>
+      <button class="icon-button" id="themeButton" type="button" title="切换主题" aria-label="切换主题">
+        <i data-lucide="moon"></i>
+      </button>
+    </div>
+  </header>
+
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar" aria-label="课程目录">
+      <section class="course-summary">
+        <div class="course-icon"><i data-lucide="route"></i></div>
+        <div>
+          <p class="eyebrow">24 周学习路线</p>
+          <h1>从前端到 Agent 应用</h1>
+        </div>
+      </section>
+
+      <section class="progress-panel" aria-label="学习进度">
+        <div class="progress-copy">
+          <span>课程进度</span>
+          <strong id="progressText">0 / 51</strong>
+        </div>
+        <div class="progress-track"><span id="courseProgress"></span></div>
+      </section>
+
+      <nav class="course-nav" id="courseNav"></nav>
+    </aside>
+
+    <button class="sidebar-overlay" id="sidebarOverlay" type="button" aria-label="关闭课程目录"></button>
+
+    <main class="content-shell" id="contentShell">
+      <article class="lesson" id="lessonContent" tabindex="-1"></article>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="./assets/lucide.min.js"></script>
+  <script src="./course-data.js"></script>
+  <script src="./foundation-data.js"></script>
+  <script src="./foundation-typescript.js"></script>
+  <script src="./foundation-nodejs.js"></script>
+  <script src="./foundation-python.js"></script>
+  <script src="./foundation-backend.js"></script>
+  <script src="./foundation-demos.js"></script>
+  <script src="./main-details.js"></script>
+  <script src="./foundation-apply.js"></script>
+  <script src="./job-track-foundations.js"></script>
+  <script src="./quiz-data.js"></script>
+  <script src="./app.js?v=20260818-sidebar2"></script>
+</body>
+</html>
